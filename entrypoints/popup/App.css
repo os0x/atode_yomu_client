@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  height: 4em;
+  padding: 1rem;
+}
+
+.logo.spin {
+  animation: rotateAnimation 0.5s cubic-bezier(.93,1.89,.98,.63) 1;
+}
+
+@keyframes rotateAnimation{
+  from {
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+  }
+}
