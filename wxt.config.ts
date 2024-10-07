@@ -3,9 +3,9 @@ import { defineConfig } from 'wxt';
 export default defineConfig({
   modules: ['@wxt-dev/module-react'],
   manifest: {
-    name: 'atode yomu',
+    name: 'atode yomu client',
     version: '0.0.1',
-    description: 'atode yomu',
+    description: 'Easily add to atode yomu',
     permissions: ['storage', 'activeTab'],
     host_permissions: ['https://atodeyomu.morishin.me/'],
     action: {
