@@ -14,6 +14,10 @@
   animation: rotateAnimation 0.5s cubic-bezier(.93,1.89,.98,.63) 1;
 }
 
+.yet {
+  margin: 1rem;
+}
+
 @keyframes rotateAnimation{
   from {
       transform: rotate(0deg);

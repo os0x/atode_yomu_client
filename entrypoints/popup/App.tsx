@@ -5,6 +5,7 @@ import './App.css';
 const ENDPOINT = 'https://atodeyomu.morishin.me/api/users/:username/pages';
 
 function App() {
+  const [isSetuped, setIsSetuped] = useState(true);
   const [loading ,setLoading] = useState(true);
   const [success, setSuccess] = useState(false);
 
@@ -12,6 +13,10 @@ function App() {
     const setup = async () => {
       const username = await storage.getItem<string>('local:username');
       const accessToken = await storage.getItem<string>('local:access-token');
+      if (!username || !accessToken) {
+        setIsSetuped(false);
+        return {};
+      }
       return { username, accessToken };
     };
 
@@ -58,6 +63,7 @@ function App() {
       {loading ? <h1>...</h1> : (
         success ? <h1>Added Unread</h1> : <h1>Failed to add to unread</h1>
       )}
+      {!isSetuped && (<div className="yet">Please setup <a href="/options.html" target="_blank">options</a></div>)}
     </>
   );
 }
