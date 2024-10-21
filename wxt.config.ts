@@ -4,9 +4,10 @@ export default defineConfig({
   modules: ['@wxt-dev/module-react'],
   manifest: {
     name: 'atode yomu client',
-    version: '0.0.2',
+    version: '0.0.3',
     description: 'Easily add to atode yomu',
     permissions: ['storage', 'activeTab'],
+    host_permissions: ['https://atodeyomu.morishin.me/'],
     action: {
       default_popup: 'popup.html',
       default_icon: {
